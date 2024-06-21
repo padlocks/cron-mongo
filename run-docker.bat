@@ -1,0 +1,1 @@
+docker run --name mongodb --volume=db:/data/db --volume=mongo_backup:/mongo_backup --volume=/data/configdb --volume=/data/db -p 27017:27017 --restart=unless-stopped -d cron-mongo:latest
