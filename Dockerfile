@@ -12,11 +12,11 @@ COPY start.sh /start.sh
 COPY auto_dump.sh /auto_dump.sh
 
 # Give execution rights on the cron job
-RUN chmod 0644 /etc/cron.d/crontab
+RUN chmod 0755 /etc/cron.d/crontab
 
 # Give execution rights on the scripts
-RUN chmod 0644 /start.sh
-RUN chmod 0644 /auto_dump.sh
+RUN chmod 0755 /start.sh
+RUN chmod 0755 /auto_dump.sh
 
 # Create the log file to be able to run tail
 # RUN touch /var/log/cron.log
